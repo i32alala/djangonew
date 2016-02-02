@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block detalleDestino %}
+
+	<h2>Detalles destino </h2>
+	
+	{% for des in destinoDetalle %}
+	<ul>
+		<li>{{des.lugar}}</li>
+		<li>{{des.descripcion}}</li>
+		<li>{{des.distancia}}</li>
+	</ul>
+	{% endfor %}
+
+{% endblock %}

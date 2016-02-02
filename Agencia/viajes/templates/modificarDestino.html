@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block modificarDestinos %}
+
+	<h1>Editar Destino</h1>
+	<form id='formulario' method='post' enctype='multipart/form-data' action=''>
+			{% csrf_token %}
+			
+				{{formulario.as_p}}
+				<input type="submit" value="Aceptar Edición"/>
+		</form>
+
+{% endblock %}

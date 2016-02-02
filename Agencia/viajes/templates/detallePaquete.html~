@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block detallePaquete %}
+	
+	<h1> Paquetes </h1>
+	
+	
+	
+	<ul>
+		<li>{{i.contenido}}</li>
+		<li>{{i.valor}}</li>
+		<li>{{i.destinatario}}</li>
+	
+	</ul>
+		
+	
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block verPaquete %}
+	
+	<h1> Paquetes </h1>
+	
+	{% for i in paquetes %}
+	
+		<table>
+		<tr><td><a href="/paquetes/detallePaquete/{{i.id}}">{{i.contenido}}</a></td>
+	
+		</tr>
+		
+	{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title> Agencia </title>
+</head>
+<body>
+	<h1>Agencia de viajes</h1>
+	
+	{% if user.is_authenticated %}
+		<h2>Bienvenido {{user.username}}</h2>
+		
+		<a href="/logout"> Salir </a>
+	{% else %}
+		<a href="/login"> Login </a>
+	
+	{% endif%}
+		<br />
+		<a href="/destinos/verDestino"> Ver Destinos </a>
+		
+		<br />
+		<a href="/paquetes/verPaquete">Ver Paquetes</a>
+		<br />
+		
+		<a href="/rutas/verRuta">Ver Ruta</a>
+	{% if user.is_authenticated %}
+		
+		<a href="/destinos/anadirDestino">Añadir Destinos</a>
+		<a href="/destinos/modificarDestMos">Modificar Destinos</a>
+		<a href="/paquetes/anadirPaquete">Añadir Paquetes</a>
+			
+	{% endif %}
+	{% block contenido %} 
+	{% endblock %}
+	
+	{% block login %}
+	{% endblock %}
+	
+	{% block verDestinos %}
+	{% endblock %}
+	
+	{% block anadirDestinos %}
+	{% endblock %}
+	
+	{% block detalleDestino %}
+	{% endblock %}
+	
+	{% block modificarDestinos %}
+	{% endblock %}
+	
+	{% block modificarDestMos %}
+	{% endblock %}
+	
+	{% block verPaquete %}
+	{% endblock %}
+	
+	{% block detallePaquete %}
+	{% endblock %}
+	
+	{% block anadirPaquete %}
+	{% endblock %}
+	
+	{% block verRuta %}
+	{% endblock %}
+	
+	{% block detalleRuta %}
+	{% endblock %}
+
+</body>
+</html>

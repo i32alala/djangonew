@@ -1,0 +1,26 @@
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+from django.views.generic import TemplateView
+from viajes import views
+from .views import *
+
+
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'Agencia.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+    
+    url(r'^/verDestino',views.verDestino, name='verDestino'),
+    url(r'^/anadirDestino',views.anadirDestino, name='anadirDest'),
+    url(r'^/detalleDestino/(?P<destino_id>\d+)',views.detalleDestino, name='detalleDest'),
+    url(r'^/modificarDestMos',views.modificarDetinoMostrar, name='modificarDesti'),
+    url(r'^/modificarDestino/(?P<destino_id>\d+)$',views.modificarDestino, name='modificarDes'),
+    url(r'^/borrarDestino/(?P<destino_id>\d+)$',views.borrarDestino, name='borrarDes'),
+    url(r'^/detallePaquete/(?P<paquete_id>\d+)$',views.paqueteDetalle, name='detallePaquete'),
+    url(r'^/verPaquete',views.verPaquete, name='verPaquete'),
+    url(r'^/anadirPaquete', views.anadirPaquete, name='anadirPaquete'),
+    url(r'^/verRuta',verRuta.as_view(), name='verRuta'),
+
+    
+	
+)

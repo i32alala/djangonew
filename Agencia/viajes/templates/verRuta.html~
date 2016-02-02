@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block verRuta %}
+
+	<h1> Rutas </h1>
+		
+	{% for i in rutas%}
+		
+		<ul>
+			<li><a href="#">{{i.nombre}}</a></li>
+		</ul>
+	
+	{% endfor %}
+{% endblock %}

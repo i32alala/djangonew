@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block anadirPaquete %}
+
+	<h1> Añadir Paquete </h1>
+		
+		<form id='formulario' method='post' enctype='multipart/form-data' action=''>
+		{% csrf_token %}
+		{{ formulario.as_p }}
+		<input type="submit" value="Enviar"/>
+		</form>
+
+{% endblock %}

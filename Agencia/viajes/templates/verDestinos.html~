@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block verDestinos %}
+	
+	<h1> Destinos </h1>
+	
+	{% for i in destinos %}
+	
+		<table>
+		<tr><td><a href="#">{{i.contenido}}</a></td>
+		</tr>
+		
+	{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block modificarDestMos %}
+	
+	<h1> Destinos </h1>
+	
+	{% for i in destinos %}
+	
+		<table>
+		<tr><td><a href="/destinos/detalleDestino/{{i.id}}">{{i.lugar}}</a></td>
+		{% if user.is_authenticated %}
+		<td><a href="/destinos/modificarDestino/{{i.id}}">Modificiar</a></td>
+		
+		{% endif %}
+		</tr>
+		
+	{% endfor %}
+
+{% endblock %}
